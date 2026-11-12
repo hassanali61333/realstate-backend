@@ -19,8 +19,8 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware');
     console.error(`Missing required env var: ${key}`);
     process.exit(1);
   }
-});
-console.log("dhassan")
+}); 
+
 const app = express();
 const server = http.createServer(app);
 const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
