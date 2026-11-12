@@ -14,7 +14,7 @@ const socketHandler = require('./socket/socketHandler');
 const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 
 // Fail fast on missing config
-['MONGO_URI', 'JWT_SECRET', 'JWT_REFRESH_SECRET'].forEach((key) => {
+['MONGO_URI', 'JWT_SECRET'].forEach((key) => {
   if (!process.env[key]) {
     console.error(`Missing required env var: ${key}`);
     process.exit(1);
